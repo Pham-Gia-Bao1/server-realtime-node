@@ -59,6 +59,7 @@ io.on("connection", (socket) => {
 
 
 // Endpoint to handle image upload
+// Endpoint to handle image upload
 app.post("/upload", upload.single("image"), (req, res) => {
   if (req.file) {
     const imageUrl = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
