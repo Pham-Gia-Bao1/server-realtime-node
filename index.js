@@ -104,9 +104,9 @@ app.post("/upload", upload.single("image"), (req, res) => {
   }
 });
 
-app.use('/api/messages', require('./routes/messageRoutes'));
+app.use('/api', require('./routes/messageRoutes'));
 
 // Start server
-server.listen(3000, () => {
-  console.log("Server running on port 3000");
+server.listen(3001, () => {
+  console.log("Server running on port 3001");
 });
